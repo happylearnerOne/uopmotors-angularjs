@@ -1,0 +1,209 @@
+/*!
+ * Start Bootstrap - Small Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+ div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+.animate-enter, 
+.animate-leave
+{ 
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+} 
+ 
+.animate-enter {
+    left: 100%;
+}
+.animate-enter.animate-enter-active {
+    left: 0;
+}
+ 
+.animate-leave {
+    left: 0;
+}
+.animate-leave.animate-leave-active{
+    left: -100%;
+}
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+/* box */
+.box {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.box-header {
+    width: 1034px;
+    height: 40px;
+    border: none;
+    padding: 2px;
+    border-bottom: 1px solid #34495e;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #34495e;
+}
+.box-content {
+    margin: 0px;
+    padding: 0px;
+    width: 1034px;
+    height: 643px;
+    overflow: auto;
+}
+.box-left {
+    border: 1px solid #34495e;
+    border-radius: 3px;
+    height:688px;
+    width: 100%;
+    padding: 0px;
+}
+.box-left-header {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 5px 2px 2px 2px;
+    border-bottom: 1px solid #34495e;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #34495e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#DDDDDD));
+}
+.box-left-header h2 {
+    font-size: 15px;
+    width: auto;
+    clear: none;
+    /*float: left;*/
+    line-height: 25px;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.box-left-content {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 94%;
+    overflow: auto;
+}
+.box-inner {
+    border: 1px solid #34495e;
+    border-radius: 3px;
+    height:688px;
+    width: 100%;
+    padding: 0px;
+}
+.box-inner-header {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 2px;
+    border-bottom: 1px solid #34495e;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #34495e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#DDDDDD));
+}
+.box-inner-content {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 643px;
+    overflow: auto;
+}
+.box-inner-header h2 {
+    font-size: 15px;
+    width: auto;
+    clear: none;
+    line-height: 25px;
+    white-space: nowrap;
+    font-weight: bold;
+    margin: 3px 0 0 10px;
+}
+
+.box-inner-header h3 {
+    font-size: 13px;
+    width: auto;
+    clear: none;
+    float: left;
+    line-height: 25px;
+    white-space: nowrap;
+}
+.selected {
+    /*background-color:#CFD7DF !important;*/
+    background-color:#F6BF00 !important;
+    font-weight:bold;
+}
+
+.table-n {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table-n > thead > tr > th,
+.table-n > tbody > tr > th,
+.table-n > tfoot > tr > th,
+.table-n > thead > tr > td,
+.table-n > tbody > tr > td,
+.table-n > tfoot > tr > td {
+  padding: 6px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.table-n > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+.table-n > caption + thead > tr:first-child > th,
+.table-n > colgroup + thead > tr:first-child > th,
+.table-n > thead:first-child > tr:first-child > th,
+.table-n > caption + thead > tr:first-child > td,
+.table-n > colgroup + thead > tr:first-child > td,
+.table-n > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table-n > tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+.table-n .table {
+  background-color: #fff;
+}

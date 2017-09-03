@@ -1,0 +1,74 @@
+	,{
+		"id": 1,
+		"name": "ZUMA 125 BW’S 125 Headlight Cover American Vision",
+		"name_ch" : "BWS 125 美規小盾牌",
+		"nameImageUrl": "styles/image/product/plastic-cover/zuma-125-upper-cover/product.jpg",
+		"bestSellerUS" : "N",
+		"bestSellerTW" : "N", 
+		"orderSeq" : "1",
+		"productImageUrl": "1.jpg",		
+		"catalog" : "Plastic-Cover/Covers",
+		"imageDirectory" : "styles/image/product/plastic-cover/zuma-125-upper-cover/",		
+		"productRelativeImageUrl" : [
+			{
+				"imageNo" : "1",
+				"imageUrl" : "1.jpg" 
+			},
+			{
+				"imageNo" : "2",
+				"imageUrl" : "2.jpg" 
+			},
+			{
+				"imageNo" : "3",
+				"imageUrl" : "3.jpg" 
+			},
+			{
+				"imageNo" : "4",
+				"imageUrl" : "4.jpg" 
+			},				
+			{
+				"imageNo" : "5",
+				"imageUrl" : "5.jpg" 
+			}							
+		],
+		"items": [
+			{
+				"itemNo": "",
+				"manufactory": "英文介面顯示的廠牌",
+				"manufactory_ch": "中文介面顯示的廠牌",
+				"model" : [
+					{
+						"manufactory" : "如果適用型號太多, 會增加一個表格將型號依照廠牌分類, 如果不分類則此行刪除不輸入",
+						"m" : "這裡寫適用型號(英文)",		
+						"m_ch" : "這裡寫適用型號(中文). 這個項目不顯示則刪除這行"
+					},
+					{
+						"manufactory" : "如果適用型號太多, 會增加一個表格將型號依照廠牌分類, 如果不分類則此行刪除不輸入",
+						"m" : "這裡寫適用型號(英文)",
+						"m_ch" : "這裡寫適用型號(中文). 這個項目不顯示則刪除這行"						
+					}
+				],
+				"color" : [
+					{
+						"color" : "這裡寫這個產品的顏色(英文). 這個項目不顯示則刪除這行",
+						"color_ch" : "這裡寫這個產品的顏色(中文). 這個項目不顯示則刪除這行",
+						"Cover" : "這裡寫小盾牌的顏色(英文). 這個項目不顯示則刪除這行",
+						"Cover_ch" : "這裡寫小盾牌的顏色(中文). 這個項目不顯示則刪除這行",
+						"PilotReflectiveSurface" : "這裡寫小燈反射的顏色(英文). 這個項目不顯示則刪除這行",
+						"PilotReflectiveSurface_ch" : "這裡寫小燈反射的顏色(中文). 這個項目不顯示則刪除這行",
+						"PilotLightCover" : "這裡寫小燈殼的顏色(英文). 這個項目不顯示則刪除這行",
+						"PilotLightCover_ch" : "這裡寫小燈殼的顏色(中文). 這個項目不顯示則刪除這行",
+						"FanCover" : "這裡寫風扇蓋的顏色(英文). 這個項目不顯示則刪除這行",
+						"FanCover_ch" : "這裡寫風扇蓋的顏色(中文). 這個項目不顯示則刪除這行",
+						"Decoration" : "這裡寫蓋飾的顏色(英文). 這個項目不顯示則刪除這行",
+						"Decoration_ch" : "這裡寫蓋飾的顏色(中文). 這個項目不顯示則刪除這行",
+						"FrontRear" : "這裡寫齒輪組的尺寸(中英文介面共用). 這個項目不顯示則刪除這行"													
+					},
+				"note" : "這裡寫英文的備註. 這個項目不顯示則刪除這行",
+				"note_ch" : "這裡寫中文的備註. 這個項目不顯示則刪除這行",
+				"accessories" : "這裡寫商品配件(英文). 這個項目不顯示則刪除這行",
+				"accessories_ch" : "這裡寫商品配件(中文). 這個項目不顯示則刪除這行"									
+				]			
+			}
+		]
+	}

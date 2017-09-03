@@ -1,0 +1,144 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('UOP:server');
+var http = require('http');
+// get ip
+var os = require('os');
+var interfaces = os.networkInterfaces();
+
+// console.log(interfaces);
+//var addresses = [];
+//var address = interfaces['Loopback Pseudo-Interface 1'][1].address;
+/*
+{ lo:
+   [ { address: '127.0.0.1',
+       netmask: '255.0.0.0',
+       family: 'IPv4',
+       mac: '00:00:00:00:00:00',
+       internal: true },
+     { address: '::1',
+       netmask: 'ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff',
+       family: 'IPv6',
+       mac: '00:00:00:00:00:00',
+       scopeid: 0,
+       internal: true } ],
+  eth0:
+   [ { address: '172.31.53.252',
+       netmask: '255.255.240.0',
+       family: 'IPv4',
+       mac: '12:b7:af:45:57:9f',
+       internal: false },
+     { address: 'fe80::10b7:afff:fe45:579f',
+       netmask: 'ffff:ffff:ffff:ffff::',
+       family: 'IPv6',
+       mac: '12:b7:af:45:57:9f',
+       scopeid: 2,
+       internal: false } ] }
+
+*/
+/*
+for (var k in interfaces) {
+    console.log("k=" + k);
+    for (var k2 in interfaces[k]) {
+
+        var address = interfaces[k][k2];        
+        console.log("k2=" + k2);
+        console.log(address.address);
+        if (address.family === 'IPv4' && !address.internal) {
+            addresses.push(address.address);
+        }
+    }
+}
+*/
+
+//console.log(addresses);
+//console.log("ip=" + address.address);
+
+/**
+ * Get port from environment and store in Express.
+ */
+ //change from 3000 to 80
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port,function() {
+  //console.log('HTTP伺服器在 http://' + address + ":" + port + '/ 上運行');
+  console.log("web server run on port:" + port);
+});
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}

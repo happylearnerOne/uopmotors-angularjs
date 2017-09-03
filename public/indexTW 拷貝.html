@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-tw" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UOP Motors - 致力於開發及生產多款新穎的汽機車改裝精品。UOP的產品涵蓋：車殼、燈具、傳動蓋、引擎風扇、齒輪組、懸吊系統…等。未來將繼續開發許多創新便宜的好產品。UOP產品適用車型有 YAMAHA - BWS, ZUMA, GYGNUS, GTR, RAY, KYMCO - RACING, MANY, VJR, G3, G4, G5, G6, SYM - JET POWER, GT, GR, Z1, PGO - X-HOT, G-MAX, BUBU, SUZUKI - ADDRESS, GSR, NEX, TEKKEN, GY6, AEON - OZ, HARTFORD - Bumble Bee。">
+    <meta name="keyword" content="uopmotors, 改裝, 精品, 車殼, 燈具, 燈, 碳纖維, 變色龍烤漆, 傳動蓋, 引擎, 風扇, 齒輪, 懸吊, 小盾牌, light, paint, upper cover, cover, carbon fiber, chameleon, accessory, accessories, parts, uop, motors, zuma, BWS, headlight cover, fan cover, rear fender, bedge, pilot light, chameleon paint, carbon fiber, fan, tmax, transmission cover, front frok, brake disk, halo light, cob, BWS, ZUMA, GYGNUS, GTR, RAY, RACING, MANY, VJR, G3, G4, G5, G6, JET POWER, GT, GR, Z1, X-HOT, G-MAX, BUBU, GY6, OZ, Bumble Bee, TMAX, YAMAHA, KYMCO, SYM, HARTFORD, SUZUKI, TMAX, GY6, AEON, PGO">
+    <meta name="URL" content="http://www.uopmotors.com"> 
+    <meta name="author" content="uopmotors"> 
+    <title>UOP Motors - 致力於開發及生產多款新穎的汽機車改裝精品。適用車型有 BWS, ZUMA, GYGNUS, GTR, RAY, RACING, MANY, VJR, G3, G4, G5, G6, JET POWER, GT, GR, Z1, X-HOT, G-MAX, BUBU, GY6, OZ, Bumble Bee, TMAX</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/toastr/toastr.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles/css/deren.css" rel="stylesheet">    
+
+</head>
+
+<body ng-init="initialize()" style="font-family: Microsoft JhengHei;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#der-en-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/HomeTW">
+                    <h1 style="margin-top:-6px;"><img class="img-responsive img-rounded" src="./styles/image/m03-r.png" alt="UOP MOTORS LOGO [ UOP Motors - 致力於開發及生產多款新穎的汽機車改裝精品。適用車型有 BWS, ZUMA, GYGNUS, GTR, RAY, RACING, MANY, VJR, G3, G4, G5, G6, JET POWER, GT, GR, Z1, X-HOT, G-MAX, BUBU, GY6, OZ, Bumble Bee, TMAX ]" width="70%" style="display:block; margin:auto;"><!--UOP--></h1>
+                    <!--<img src="./image/logo.jpg" alt="">-->
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="der-en-navbar-collapse-1">
+                <ul class="nav navbar-nav" ng-controller="indexTWCtrl">
+                    <li ng-repeat="navItem in navItems" ng-class="{active: isActive(navItem)}"><a href="#{{navItem.path}}">{{navItem.title}}</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-show="canSearch">
+                        <!--
+                        <i class="glyphicon glyphicon-search" style="color:white;"></i><input type="text" placeholder="Search"  style="margin-top:20px;" />
+                        -->
+                        <form class="form-inline" style="margin-top:10px;">
+                          <div class="form-group">
+                            <!--
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        -->
+                            <div class="input-group" >
+                                  <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                                  <input type="text" ng-model="search.$" class="form-control" id="exampleInputEmail3" placeholder="搜尋產品" ng-controller="productsTWCtrl" ng-enter="doChangeCatalog('Search', '搜尋結果')"> 
+                                                     
+                            </div>
+                          </div>                          
+                        </form>                        
+                    </li>                    
+                    <li><a href="/indexUS"><span class="glyphicon glyphicon-flag"></span><font style="color:white; font-weight:bold;">English(US)</font></a></li>
+                    <li><a href="https://www.facebook.com/UOPmotors" target="_blank"><img ng-src="styles/image/find-us.jpg" alt="UOP Motors - 致力於開發及生產多款新穎的汽機車改裝精品。適用車型有 BWS, ZUMA, GYGNUS, GTR, RAY, RACING, MANY, VJR, G3, G4, G5, G6, JET POWER, GT, GR, Z1, X-HOT, G-MAX, BUBU, GY6, OZ, Bumble Bee, TMAX" align="right" height="40"></a></li>
+                </ul>   
+            </div>
+                                      
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- main container -->
+    <div class="container">
+        <!-- put your content here -->
+        <div ng-view></div>
+    </div>  
+
+    <!-- Footer -->
+    <div class="container">
+        <footer style="border-width:1px;border-top-style:solid;">
+            <div class="row">
+                <div class="col-md-12">© 2015 UOP Motors Technology Inc. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- script start -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> 
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>    
+    <script src="bower_components/toastr/toastr.min.js"></script>
+    <!-- Load app main script -->
+    <script src="components/app.module.js"></script>
+    <script src="components/controllers/indexTWCtrl.js"></script>
+    <script src="components/controllers/indexCtrl.js"></script>
+    <!--<script src="components/controllers/homeCtrl.js"></script>-->
+    <script src="components/controllers/productsTWCtrl.js"></script>
+    <script src="components/controllers/contactUsCtrl.js"></script>
+    <script src="components/controllers/aboutUsCtrl.js"></script>
+    <script src="components/services/productsService.js"></script>
+    <script src="components/services/contactUsService.js"></script>
+    <script src="components/directives/ngEnter.js"></script>
+    <!-- google map -->
+    <script src="http://maps.googleapis.com/maps/api/js?language=zh-tw"></script>
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+
+</body>
+
+</html>

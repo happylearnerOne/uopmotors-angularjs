@@ -1,0 +1,49 @@
+<div ng-init="initialize()">
+	<div>
+		<map center="24.943739,121.3928103" zoom="15" map-type-id="TERRAIN" sensor="false">
+			<marker position="24.943739,121.3928103" title="UOP Motors Technology Inc."></marker>
+		</map>		
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="col-md-12">
+				<h4>HOW TO CONTACT US</h4>
+				<p>Please feel free to contacr us by Email, or leave your message if you have any question.</p>
+				<p>It is always our great pleasure to serve you anytime!</p>
+			</div>
+			<br>
+			<div class="col-md-6">
+				<h4>OFFICE</h4>
+				<p>No.68-23, Aly.254, Ln.222, Sanshu Rd.,Sanxia Dist, New Taipei City 237, Taiwan(R.O.C.)</p>			
+			</div>
+			<div class="col-md-6">
+				<h4>CONTACT INFO</h4>
+				<p>Tel: +886-2-26718169</p>
+				<p>Fax: +886-2-26728519</p>
+				<p>Email: <a href="maito:uop168@gmail.com">uop168@gmail.com</a></p>
+			</div>			
+		</div>
+		<div class="col-md-6" style="border-width:1px;border-left-style:solid;border-color:#D3D3D3">
+			<h4>LEAVE YOUR MESSAGE</h4>
+			<form role="form" novalidate name="emailForm">
+				<div class="form-group">
+				    <input type="text" class="form-control" placeholder="&#xf007; Your name" style="font-family:FontAwesome" ng-model="message.name">
+				</div>
+				<div class="form-group">
+				    <input type="email" class="form-control" placeholder="&#xf003; Your email" style="font-family:FontAwesome" ng-model="message.mailto">
+				</div>
+				<div class="form-group">
+				    <input type="text" class="form-control" placeholder="&#xf040; Subjects" style="font-family:FontAwesome" ng-model="message.subject">
+				</div>
+				<div class="form-group">
+				    <textarea rows="5" class="form-control" placeholder="Your message" ng-model="message.content"></textarea>
+				</div>
+		  		<div class="form-group"> 
+		      		<button class="btn btn-default" ng-click="sendMail()">Send</button>
+		  		</div>		
+			</form>
+		</div>
+	</div>
+	<br>
+</div>

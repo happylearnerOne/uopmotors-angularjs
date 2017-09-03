@@ -1,0 +1,154 @@
+<div class="row box" ng-init="initialize()">
+	<div class="col-md-3">
+		<div class="box-left">
+			<div class="box-left-header" style="text-align:center">
+				<span>									
+					<div class="dropdown">
+						{{catalogName}}<img ng-src="styles/image/best-sellers.jpg" style="height:30px" ng-show="catalogName == 'Best-Seller'">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					  	Cat.
+					    <span class="caret"></span>					    
+					  </button>					  	
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					  	<li><a ng-click="doChangeCatalog('Best-Seller')">Best Seller<img ng-src="styles/image/best-sellers.jpg" style="height:40px"></a></li>
+					  	<li><a ng-click="doChangeCatalog('Covers')">Covers</a></li>
+					    <li><a ng-click="doChangeCatalog('Plastic-Cover')">　　Plastic Cover</a></li>
+					    <li><a ng-click="doChangeCatalog('Carbon/Chameleon')">　　Cover With Carbon Fiber/Chameleon Paint</a></li>
+					    <!-- <li><a ng-click="doChangeCatalog('CNC-Parts')">　　CNC Parts</a></li> -->
+					    <li><a ng-click="doChangeCatalog('Engine-Parts')">Engine Parts</a></li>
+					    <li><a ng-click="doChangeCatalog('Transmission-Parts')">Transmission Parts</a></li>
+					    <li><a ng-click="doChangeCatalog('Suspension-Parts')">Suspension Parts</a></li>
+					    <li><a ng-click="doChangeCatalog('Light')">Light</a></li>
+					    <li><a ng-click="doChangeCatalog('Head-Lamp')">　　Head Lamp</a></li>
+					    <li><a ng-click="doChangeCatalog('Taillight')">　　Taillight</a></li>
+					    <li><a ng-click="doChangeCatalog('Signal-Light')">　　Signal Light</a></li>
+					    <li><a ng-click="doChangeCatalog('Others')">　　Others</a></li>
+					    <li><a ng-click="doChangeCatalog('Electronics')">Electronics</a></li>
+					    <li><a ng-click="doChangeCatalog('Special-Customized-CNC-Parts')">Special Customized CNC Parts</a></li>
+					    <!-- <li><a ng-click="doChangeCatalog('Search')">Search Result</a></li> -->
+					  </ul>
+					</div>		
+				</span>
+			</div>
+			<div class="box-left-content">		
+				<table class="table table-striped">
+					<tr ng-repeat="product in products | orderBy: ['orderSeq','id']:false" ng-class="{'selected':$index == selectedRow}" ng-click="selectProduct($index,product.id)">
+						<td>
+							<img ng-src={{product.nameImageUrl}} >
+						</td>
+						<td>
+							{{product.name}}<img ng-src="styles/image/best-sellers.jpg" style="height:30px" ng-show="product.bestSellerUS == 'Y' && catalogName != 'Best-Seller'">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9">		
+		<div class="row box-inner">
+			<div class="box-inner-header">
+				<span><h2>{{productName}}</h2></span>
+			</div>
+			<div class="box-inner-content">
+				<div class="col-md-12" ng-show="imageDirectory == null" >
+					<img ng-src="styles/image/sellout.jpg" style="width:60%; display: block; margin-left: auto;margin-right: auto;"> 
+				</div>
+				<div class="col-md-6" ng-hide="imageDirectory == null">
+					<img ng-src={{imageDirectory}}{{productImageUrl}} style="width:99%;border:1px;border-color:black;border-style:solid;">				
+					<br/>
+					<br/>
+					<table width="100%">
+						<tr>
+							<td>
+								<span ng-repeat="prImageUrl in productRelativeImageUrl">	
+									<img ng-src="{{imageDirectory}}{{prImageUrl.imageUrl}}" style="width:123px;border:1px;border-style: solid;border-color: black;margin-top:5px;margin-bottom:5px; cursor: pointer; " ng-click="doChangeImage(prImageUrl.imageUrl)"> 
+								</span>
+							</td>
+						</tr>
+					</table>			
+				</div>
+				<div class="col-md-6" style="margin-top:10px;" ng-hide="imageDirectory == null">
+					<table class="table table-bordered table-striped" ng-repeat="item in items">
+							<tr>
+								<th style="width:30%;padding: 6px;">Item Number</th>
+								<td style="width:70%;padding: 6px;">{{item.itemNo}}</td>
+							</tr>
+							<tr>
+								<th style="padding: 6px;">Manufactory</th>
+								<td style="padding: 6px;">{{item.manufactory}}</td>
+							</tr>	
+							<tr>
+								<th style="padding: 6px;">Model</th>
+								<td style="padding: 6px;">
+									<table class="table table-bordered table-striped">
+										<tr ng-repeat="m in item.model">
+											<td style="padding: 6px;" ng-hide="m.manufactory == null">{{m.manufactory}}</td>
+											<td style="padding: 6px;">{{m.m}}</td>
+										</tr>
+									</table></td>
+							</tr>	
+							<tr ng-hide="item.FrontRear == null">
+								<th style="padding: 6px;">Front/Rear</th>
+								<td style="padding: 6px;">{{item.FrontRear}}</td>
+							</tr>
+							<tr>
+								<th style="padding: 6px;" ng-hide="item.color == null">Color</th>
+								<td style="padding: 6px;">
+									<table class="table table-bordered table-striped" ng-repeat="c in item.color">
+										<tr ng-hide="c.color == null">
+											<td style="padding: 6px;" colspan="2">{{c.color}}</td>
+										</tr>									
+										<tr ng-hide="c.FanCover == null">
+											<th style="padding: 6px;">Fan Cover</th>
+											<td style="padding: 6px;">{{c.FanCover}}</td>
+										</tr>
+										<tr ng-hide="c.Decoration == null">
+											<th style="padding: 6px;">Decoration</th>
+											<td style="padding: 6px;">{{c.Decoration}}</td>
+										</tr>
+										<tr ng-hide="c.Cover == null">
+											<th style="padding: 6px;">Cover</th>
+											<td style="padding: 6px;">{{c.Cover}}</td>
+										</tr>	
+										<tr ng-hide="c.PilotReflectiveSurface == null">
+											<th style="padding: 6px;">Pilot Light's Reflective Surface</th>
+											<td style="padding: 6px;">{{c.PilotReflectiveSurface}}</td>
+										</tr>										
+										<tr ng-hide="c.PilotLightCover == null">
+											<th style="padding: 6px;">Pilot Light's Cover</th>
+											<td style="padding: 6px;">{{c.PilotLightCover}}</td>
+										</tr>																				
+									</table>
+								</td>
+							</tr>
+							<tr ng-hide="item.accessories == null">
+								<th style="padding: 6px;">Accessories</th>
+								<td style="padding: 6px;">{{item.accessories}}</td>
+							</tr>
+							<tr ng-hide="item.note == null">
+								<th style="padding: 6px;">Note</th>
+								<td style="padding: 6px;">{{item.note}}</td>
+							</tr>														
+							<tr>
+								<th style="padding: 6px;" colspan="2">Where to shop</th>
+							</tr>
+							<tr>
+								<td style="padding: 6px;" colspan="2">
+									<table class="table table-bordered table-striped"> 
+										<tr>
+											<th style="padding: 6px;">ebay(US)</th>
+											<td style="padding: 6px;"><a href="http://stores.ebay.com/uopmotors">http://stores.ebay.com/uopmotors</a></td>
+										</tr>
+										<tr>
+											<th style="padding: 6px;">ruten(TW)</th>
+											<td style="padding: 6px;"><a href="http://class.ruten.com.tw/user/index00.php?s=oddoby2009">http://class.ruten.com.tw/user/index00.php?s=oddoby2009</a></td>
+										</tr>										
+									</table>									
+								</td>
+							</tr>
+					</table>
+				</div>
+			</div>				
+		</div>
+	</div>
+</div>

@@ -1,0 +1,77 @@
+	{
+		"id": 3,
+		"name": "ZUMA 125 BW’S 125 Carbon Fiber Headlight Cover ",
+		"nameImageUrl": "styles/image/product/carbon-fiber-chameleon-paint/zuma-125-headlight-upper-cover-carbon-fiber/product.jpg",
+		"productImageUrl": "1.jpg",		
+		"catalog" : "Carbon/Chameleon/Covers",
+		"imageDirectory" : "styles/image/product/plastic-cover/bws-black-headlight-cover/",
+		"productRelativeImageUrl" : [
+			{
+				"imageNo" : "1",
+				"imageUrl" : "1.jpg" 
+			},
+			{
+				"imageNo" : "2",
+				"imageUrl" : "2.jpg" 
+			},
+			{
+				"imageNo" : "3",
+				"imageUrl" : "3.jpg" 
+			},
+			{
+				"imageNo" : "4",
+				"imageUrl" : "4.jpg" 
+			}											
+		],			
+		"items": [
+			{
+				"itemNo": "",
+				"manufactory": "Universal",
+				"model" : [
+					{
+						"m" : "Sooter-ALL 125cc 150cc 180cc with rear double shock absorber"
+					},
+					{
+						"m" : "Bike-12” 14” 17” Bike"
+					}
+				],
+				"color" : [
+					{
+						"color" : "Black/ White/ Red/ Blue/ Green/ Yellow/ Pink"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "ZUMA 125 BW’S 125 Chameleon Paint Headlight Cover",
+		"nameImageUrl": "styles/image/product/carbon-fiber-chameleon-paint/zuma-125-headlight-upper-cover-chameleon/product.jpg",
+		"productImageUrl": "1.jpg",		
+		"catalog" : "Carbon/Chameleon/Covers",
+		"imageDirectory" : "styles/image/product/carbon-fiber-chameleon-paint/zuma-125-headlight-upper-cover-chameleon/",
+		"productRelativeImageUrl" : [
+			{
+				"imageNo" : "1",
+				"imageUrl" : "1.jpg" 
+			},
+			{
+				"imageNo" : "2",
+				"imageUrl" : "2.jpg" 
+			},
+			{
+				"imageNo" : "3",
+				"imageUrl" : "3.jpg" 
+			},
+			{
+				"imageNo" : "4",
+				"imageUrl" : "4.jpg" 
+			}											
+		],			
+		"items": [
+			{
+				"itemNo": "",
+				"manufactory": "YAMAHA"			
+			}
+		]
+	}

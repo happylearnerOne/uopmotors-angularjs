@@ -1,0 +1,49 @@
+<div ng-init="initialize()">
+	<div>
+		<map center="24.943739,121.3928103" zoom="15" map-type-id="TERRAIN" sensor="false">
+			<marker position="24.943739,121.3928103" title="UOP Motors Technology Inc."></marker>
+		</map>		
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="col-md-12">
+				<h4>如何聯絡我們</h4>
+				<p>如果您有任何問題，歡迎您Email或留言給我們！</p>
+				<p>我們很高興能有這個機會為您服務！</p>
+			</div>
+			<br>
+			<div class="col-md-6">
+				<h4>公司地址</h4>
+				<p>新北市三峽區三樹路222巷254弄68-23號</p>			
+			</div>
+			<div class="col-md-6">
+				<h4>聯絡方式</h4>
+				<p>電話: 02-26718169</p>
+				<p>傳真: 02-26728519</p>
+				<p>電子郵件: <a href="maito:uop168@gmail.com">uop168@gmail.com</a></p>
+			</div>			
+		</div>
+		<div class="col-md-6" style="border-width:1px;border-left-style:solid;border-color:#D3D3D3">
+			<h4>您的留言</h4>
+			<form role="form" novalidate name="emailForm">
+				<div class="form-group">
+				    <input type="text" class="form-control" placeholder="&#xf007; 您的姓名" style="font-family:FontAwesome" ng-model="message.name">
+				</div>
+				<div class="form-group">
+				    <input type="email" class="form-control" placeholder="&#xf003; 您的電子郵件" style="font-family:FontAwesome" ng-model="message.mailto">
+				</div>
+				<div class="form-group">
+				    <input type="text" class="form-control" placeholder="&#xf040; 留言主旨" style="font-family:FontAwesome" ng-model="message.subject">
+				</div>
+				<div class="form-group">
+				    <textarea rows="5" class="form-control" placeholder="留言內容" ng-model="message.content"></textarea>
+				</div>
+		  		<div class="form-group"> 
+		      		<button class="btn btn-default" ng-click="sendMail()">送出</button>
+		  		</div>		
+			</form>
+		</div>
+	</div>
+	<br>
+</div>

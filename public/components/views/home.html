@@ -1,0 +1,88 @@
+<!-- Heading Row  style="border-width:medium; border-style:dashed;"-->
+<div class="row">
+    <div class="col-md-8"> 
+       <!--  <div class="carousel"> -->
+        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+              <img class="img-responsive img-rounded " ng-src="{{slide.image}}" alt="" width="90%">
+              <!--
+              <div class="carousel-caption">
+                <h4>Slide {{slide.id}}</h4>
+                <p>{{slide.text}}</p>
+              </div>
+              -->
+            </uib-slide>
+        </uib-carousel>   
+       <!--  </div>   -->   
+        <!--       
+        <div  class='switch' ng-switch on="article">
+            <div ng-switch-when="1" >
+                <img class="img-responsive img-rounded" src="./styles/image/i1.jpg" alt="" width="90%">
+            </div>
+            <div ng-switch-when="2" >
+                <img class="img-responsive img-rounded" src="./styles/image/i2.jpg" alt="" width="90%">
+            </div>
+            <div ng-switch-when="3" >
+                <img class="img-responsive img-rounded" src="./styles/image/i3.jpg" alt="" width="90%"> 
+            </div>  
+            <div ng-switch-when="4" >
+                <img class="img-responsive img-rounded" src="./styles/image/i4.jpg" alt="" width="90%"> 
+            </div>     
+            <div ng-switch-when="5" >
+                <img class="img-responsive img-rounded" src="./styles/image/i5.jpg" alt="" width="90%"> 
+            </div>                            
+        </div>
+        -->
+    <!--
+        <img class="img-responsive img-rounded" src="./styles/image/index2.jpg" alt="">
+    -->
+    <!--
+    <img ng-repeat="slide in slides" class="slide" ng-src="{{slide.image}}">
+-->
+    <!--
+        <ng-carousel src-init="img" motion="continuous" speed="10">         
+        </ng-carousel>    
+    -->
+    </div>
+    <!-- /.col-md-8 style="border-width:medium; border-style:dashed;"-->
+    <div class="col-md-4" >
+        <iframe width="350" height="196" src="https://www.youtube.com/embed/videoseries?list=PLiKAjcfbYVVb275GW9ODObGNpPAWR-lhg&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+        <!--<h1 style="margin-top:0px;">UOP Motors</h1>-->
+        <img class="img-responsive img-rounded" src="./styles/image/uop-motors.jpg">
+        <p style="font-size:120%"> <b>is a professional injection molded plastics manufacturing company.</b>
+        <div class="row">             
+            <div class="col-md-12">
+                <img src="./styles/image/1.jpg" class="img-responsive img-rounded"  width="80%">   
+                <p style="font-size:120%"> <b>We have equipped with excellent molding techniques, and first-class equipments, so we can provide high quality parts.</b></p>
+               <!-- <img src="./styles/image/3.jpg" class="img-responsive img-rounded"  width="80%">
+                <br/>-->
+                <!--
+                <img src="./styles/image/4.jpg" class="img-responsive img-rounded"  width="80%">
+            -->
+            </div>
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
+<Br/>
+
+<div class="row">
+    <div class="col-md-4">
+        <!--
+        <h1>WE are not just a seller. </h1>
+        <p style="font-size:150%">We  </p>
+        -->
+        <img class="img-responsive img-rounded" src="./styles/image/uop-we-orig.jpg" alt="">
+    </div>
+    <div class="col-md-8">
+        <br/>
+        <h2>are not just a seller.</h2>
+        <h2>are a real designer and manufacturer.</h2>
+        <!-- col-md-offset-1
+        <img class="img-responsive img-rounded" src="./styles/image/3.jpg" alt="" >
+        -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
